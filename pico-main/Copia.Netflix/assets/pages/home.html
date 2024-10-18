@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Clon de Netflix: Explora las últimas tendencias en películas y series">
+    <title>Clon de Netflix - Inicio</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+</head>
+<body>
+    <header>
+        <div id="navbar" role="navigation">
+            <a href="home.html" class="logo">
+                <img src="../IMG/images__3_-removebg-preview.png" alt="Logo de Netflix" width="200" height="75">
+            </a>
+            <nav>
+                <ul>
+                    <a href="home.html">INICIO</a>
+                    <a href="category.html">SERIES DE TV</a>
+                    <a href="#">PELÍCULAS</a>
+                    <a href="category.html">NOVEDADES</a>
+                </ul>
+            </nav>
+            <form role="search" aria-label="Buscar en el sitio">
+                <input type="search" id="search-bar" placeholder="Buscar películas o series" aria-label="Buscar películas o series">
+                <button type="submit" aria-label="Enviar búsqueda">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+        </div>
+    </header>
+
+    <main>
+        <section id="main-banner" aria-labelledby="banner-title">
+            <div id="main-banner">
+                <div id="banner-overlay"></div>
+                <img id="banner-image" alt="Banner Movie">
+                <div class="banner-content">
+                    <h1 id="banner-title"></h1>
+                    <p id="banner-description"></p>
+                    <div class="banner-buttons">
+                        <button id="play-btn">▶ Reproducir</button>
+                        <button id="info-btn">ℹ Más Información</button>
+                    </div>
+                </div>
+            </div>  
+            <div id="banner-overlay" aria-hidden="true"></div>
+            <img src="../assets/banner.jpg" alt="" id="banner-image" aria-hidden="true">
+        </section>
+
+        <section class="category-section" aria-labelledby="trending-title">
+            <h2 id="trending-title">TENDENCIAS DE PELÍCULAS</h2>
+            <div class="carousel" id="trending-carousel">
+                <!-- Las imágenes de películas se cargarán aquí dinámicamente -->
+            </div>
+        </section>
+
+        <section class="category-section" aria-labelledby="popular-title">
+            <h2 id="popular-title">POPULAR EN NETFLIX</h2>
+            <div class="carousel" id="popular-carousel">
+                <!-- Las imágenes de películas se cargarán aquí dinámicamente -->
+            </div>
+        </section>
+
+        <section class="category-section" aria-labelledby="mylist-title">
+            <h2 id="mylist-title">MI LISTA</h2>
+            <div class="carousel" id="my-list-carousel">
+                <!-- Las imágenes de películas de "Mi lista" se cargarán aquí dinámicamente -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Clon de Netflix. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="../js/app.js"></script>
+    <script src="../js/api.js"></script>
+</body>
+</html>

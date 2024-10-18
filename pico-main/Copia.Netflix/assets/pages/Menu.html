@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <link rel="apple-touch-icon" href="">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            background-image: url('../IMG/CO-es-20241008-TRIFECTA-perspective_a5e8c926-2f69-47ff-b0e3-1c45616ea10d_small.jpg');
+        }
+
+        .background::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            background-image: linear-gradient(to top,rgba(0,0,0,.8) 0,rgba(0,0,0,0) 60%,rgba(0,0,0,.8) 100%);
+        }
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 450px;
+            background-color: rgba(0, 0, 0, 0.75);
+            border-radius: 4px;
+            padding: 60px 68px 40px;
+            box-sizing: border-box;
+        }
+        .logo {
+            margin-bottom: 30px;
+            text-align: left;
+        }
+        .logo img {
+            width: 167px;
+        }
+        h1 {
+            font-size: 32px;
+            font-weight: 500;
+            margin-bottom: 28px;
+        }
+        .form-control {
+            margin-bottom: 16px;
+        }
+        input {
+            width: 100%;
+            height: 50px;
+            background-color: #333;
+            border: none;
+            border-radius: 4px;
+            color: #fff;
+            padding: 16px 20px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        input::placeholder {
+            color: #8c8c8c;
+        }
+        button {
+            width: 100%;
+            height: 48px;
+            background-color: #e50914;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: 700;
+            margin-top: 24px;
+            cursor: pointer;
+        }
+        .options {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 10px;
+        }
+        .remember {
+            color: #b3b3b3;
+            font-size: 13px;
+        }
+        .help {
+            color: #b3b3b3;
+            font-size: 13px;
+            text-decoration: none;
+        }
+        .signup {
+            color: #737373;
+            font-size: 16px;
+            margin-top: 16px;
+        }
+        .signup a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .signup a:hover {
+            text-decoration: underline;
+        }
+        .captcha {
+            color: #8c8c8c;
+            font-size: 13px;
+            margin-top: 11px;
+        }
+        .captcha a {
+            color: #0071eb;
+            text-decoration: none;
+        }
+        .separator {
+            text-align: center;
+            margin: 10px 0;
+            color: #8c8c8c;
+        }
+    </style>
+</head>
+<body>
+    <div class="background"></div>
+    <div class="container">
+        <div class="logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix">
+        </div>
+        <h1>Inicia sesión</h1>
+        <form id="formularioLogin">
+            <div class="form-control">
+                <input type="text" id="usuario" placeholder="Email o número de celular" required>
+            </div>
+            <div class="form-control">
+                <input type="password" id="contrasena" placeholder="Contraseña" required>
+            </div>
+            <button type="submit">Iniciar sesión</button>
+            <div class="options">
+                <label class="remember">
+                    <input type="checkbox"> Recuérdame
+                </label>
+                <a href="#" class="help">¿Olvidaste la contraseña?</a>
+            </div>
+        </form>
+        <div class="signup">
+            ¿Primera vez en Netflix? <a href="#">Suscríbete ahora</a>.
+        </div>
+        <div class="signup">
+            <a href="#">Usar un código de inicio de sesión</a>
+        </div>
+        <div class="captcha">
+            Esta página está protegida por Google reCAPTCHA para comprobar que no eres un robot. <a href="#">Más info.</a>
+        </div>
+    </div>
+
+    <script>
+    function iniciarSesion(evento) {
+        evento.preventDefault();
+        const usuario = document.getElementById('usuario').value;
+        const contrasena = document.getElementById('contrasena').value;
+        if (usuario === 'pico' && contrasena === '1234') {
+            window.location.href = '../pages/home.html';
+        } else {
+            alert('Usuario o contraseña incorrectos');
+        }
+    }
+    document.getElementById('formularioLogin').addEventListener('submit', iniciarSesion);
+    </script>
+</body>
+</html>

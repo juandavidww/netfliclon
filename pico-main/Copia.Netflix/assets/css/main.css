@@ -1,0 +1,173 @@
+/* Estilos generales */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    background-color: #141414;
+    color: white;
+}
+
+header {
+    background-color: #111;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 120px;
+}
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+#navbar nav {
+    display: flex;
+    align-items: center;
+}
+
+#navbar nav a {
+    color: #e5e5e5;
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.search-container {
+    position: relative;
+}
+/* ... (estilos previos) ... */
+
+/* Banner principal */
+#main-banner {
+    position: relative;
+    height: 80vh;
+    background-color: black;
+    overflow: hidden;
+}
+
+#banner-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+#banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 60%, rgba(0, 0, 0, 0) 100%);
+    z-index: 2;
+}
+
+.banner-content {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    z-index: 3;
+    max-width: 500px;
+    color: white;
+}
+
+#banner-title {
+    font-size: 3rem;
+    margin: 0 0 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+#banner-description {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.banner-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.banner-buttons button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+#play-btn {
+    background-color: white;
+    color: black;
+}
+
+#info-btn {
+    background-color: rgba(109, 109, 110, 0.7);
+    color: white;
+}
+
+/* ... (estilos posteriores) ... */
+/* Secciones de categorías */
+.category-section {
+    padding: 20px;
+}
+
+.category-section h2 {
+    margin: 10px 0;
+    font-size: 24px;
+}
+
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+.carousel img {
+    width: 200px;
+    height: auto;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.carousel img:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #navbar nav {
+        margin-top: 10px;
+    }
+
+    .search-container {
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    #search-bar {
+        width: 100%;
+    }
+}
